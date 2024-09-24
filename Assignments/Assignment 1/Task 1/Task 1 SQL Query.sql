@@ -1,4 +1,5 @@
 -- Niranjan Kolpe - C# Batch-2
+-- SQL - Assignment 1 - Electronic Gadgets
 USE master;
 CREATE DATABASE NiranjanDB;
 USE NiranjanDB;
