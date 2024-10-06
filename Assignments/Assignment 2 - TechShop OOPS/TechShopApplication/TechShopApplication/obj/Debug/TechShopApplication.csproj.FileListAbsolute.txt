@@ -1,0 +1,7 @@
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - TechShop OOPS\TechShopApplication\TechShopApplication\obj\Debug\TechShopApplication.csproj.AssemblyReference.cache
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - TechShop OOPS\TechShopApplication\TechShopApplication\obj\Debug\TechShopApplication.csproj.CoreCompileInputs.cache
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - TechShop OOPS\TechShopApplication\TechShopApplication\bin\Debug\TechShopApplication.exe.config
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - TechShop OOPS\TechShopApplication\TechShopApplication\bin\Debug\TechShopApplication.exe
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - TechShop OOPS\TechShopApplication\TechShopApplication\bin\Debug\TechShopApplication.pdb
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - TechShop OOPS\TechShopApplication\TechShopApplication\obj\Debug\TechShopApplication.exe
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - TechShop OOPS\TechShopApplication\TechShopApplication\obj\Debug\TechShopApplication.pdb
