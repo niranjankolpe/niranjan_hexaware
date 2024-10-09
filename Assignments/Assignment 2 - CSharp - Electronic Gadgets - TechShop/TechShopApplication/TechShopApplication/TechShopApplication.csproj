@@ -43,23 +43,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customers.cs" />
-    <Compile Include="DatabaseConnectivity.cs" />
-    <Compile Include="Interfaces\ICustomers.cs" />
-    <Compile Include="Interfaces\IInventory.cs" />
-    <Compile Include="Interfaces\IOrderDetails.cs" />
-    <Compile Include="Interfaces\IOrders.cs" />
-    <Compile Include="Interfaces\IProducts.cs" />
-    <Compile Include="Inventory.cs" />
-    <Compile Include="OrderDetails.cs" />
-    <Compile Include="Orders.cs" />
-    <Compile Include="Products.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UITechShop.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Repository\CustomersRepository.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Repository\DatabaseConnectivity.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Repository\ICustomersRepository.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Repository\IInventoryRepository.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Repository\InventoryRepository.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Repository\IOrderDetailsRepository.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Repository\IOrdersRepository.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Repository\IProductsRepository.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Repository\OrderDetailsRepository.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Repository\OrdersRepository.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Repository\ProductsRepository.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Service\CustomersService.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Service\ICustomersService.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Service\IInventoryService.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Service\InventoryService.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Service\IOrderDetailsService.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Service\IOrdersService.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Service\IProductsService.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Service\OrderDetailsService.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Service\OrdersService.cs" />
+    <Compile Include="TechShopApplication.BusinessLayer\Service\ProductsService.cs" />
+    <Compile Include="TechShopApplication.Entities\Customers.cs" />
+    <Compile Include="TechShopApplication.Entities\Inventory.cs" />
+    <Compile Include="TechShopApplication.Entities\OrderDetails.cs" />
+    <Compile Include="TechShopApplication.Entities\Orders.cs" />
+    <Compile Include="TechShopApplication.Entities\Products.cs" />
+    <Compile Include="TechShopApplication.UI\UITechShop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,7 +17,8 @@ namespace TechShopApplication
                 UITechShop uITechShop = new UITechShop();
                 uITechShop.RunTechShopApp();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 Console.Write("\nError Occured as follows: ");
                 Console.WriteLine(ex.Message);
             }

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace TechShopApplication
 {
-    internal class Products
+    internal class ProductsRepository : IProductsRepository
     {
         private int ProductID;
         private string ProductName;
@@ -15,28 +15,13 @@ namespace TechShopApplication
         private int Price;
 
 
-        internal int _ProductID {  get; set; }
+        internal int _ProductID { get; set; }
 
         internal int _ProductName { get; set; }
 
         internal string _Description { get; set; }
 
         internal int _Price { get; set; }
-
-        public Products()
-        {
-            this.ProductID = 0;
-            this.ProductName = string.Empty;
-            this.Description = string.Empty;
-            this.Price = 0;
-        }
-        public Products(int productID, string productName, string description, int price)
-        {
-            this.ProductID = productID;
-            this.ProductName = productName;
-            this.Description = description;
-            this.Price = price;
-        }
 
         public void GetProductDetails()
         {
@@ -68,7 +53,7 @@ namespace TechShopApplication
             Console.WriteLine("Enter the field number to update:");
             Console.WriteLine("1. Product ID, 2. Product Name, 3. Description, 4. Price");
             int fieldNumber = int.Parse(Console.ReadLine());
-            List<string> columns = new List<string>() { "ProductID", "ProductName", "Description", "Price"};
+            List<string> columns = new List<string>() { "ProductID", "ProductName", "Description", "Price" };
 
             Console.Write("Enter new value: ");
             string newValue = Console.ReadLine();
@@ -109,7 +94,8 @@ namespace TechShopApplication
             SqlCommand cmd = new SqlCommand(sql, connection);
             SqlDataReader reader = cmd.ExecuteReader();
 
-            while (reader.Read()) {
+            while (reader.Read())
+            {
                 Console.WriteLine($"Quantity in Stock: {reader.GetInt32(0)}");
             }
             connection.Close();

@@ -1,48 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace TechShopApplication
 {
-    internal class OrderDetails
+    class OrdersRepository : IOrdersRepository
     {
-        private int OrderDetailID;
         private int OrderID;
-        private int ProductID;
-        private int Quantity;
-
-        internal int _OrderDetailID {  get; set; }
+        private int CustomerID;
+        private DateTime OrderDate;
+        private int TotalAmount;
 
         internal int _OrderID { get; set; }
 
-        internal int _ProductID { get; set; }
+        internal int _CustomerID { get; set; }
 
-        internal int _Quantity { get; set; }
+        internal DateTime _OrderDate { get; set; }
 
-        public OrderDetails()
-        {
-            this.OrderDetailID = 0;
-            this.OrderID = 0;
-            this.ProductID = 0;
-            this.Quantity = 0;
-        }
+        internal int _TotalAmount { get; set; }
 
-        public OrderDetails(int orderDetailID, int orderID, int productID, int quantity)
-        {
-            this.OrderDetailID = orderDetailID;
-            this.OrderID = orderID;
-            this.ProductID = productID;
-            this.Quantity = quantity;
-        }
-        public void CalculateSubTotal()
+        public void CalculateTotalAmount()
         {
             SqlConnection connection = DatabaseConnectivity.GetDBConnection();
             connection.Open();
 
-            Console.Write("Enter Order ID: ");
+            Console.Write("Enter OrderID: ");
             int orderID = int.Parse(Console.ReadLine());
             string sql = $"SELECT TotalAmount FROM Orders WHERE OrderID={orderID}";
 
@@ -55,26 +40,26 @@ namespace TechShopApplication
             connection.Close();
         }
 
-        public void GetOrderDetailInfo()
+        public void GetOrderDetails()
         {
             SqlConnection connection = DatabaseConnectivity.GetDBConnection();
             connection.Open();
 
             Console.Write("Enter Order ID: ");
             int orderID = int.Parse(Console.ReadLine());
-            string sql = $"SELECT * FROM OrderDetails WHERE OrderID={orderID}";
+            string sql = $"SELECT * FROM Orders WHERE OrderID={orderID}";
 
             SqlCommand cmd = new SqlCommand(sql, connection);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Read();
 
-            Console.WriteLine($"Order Details ID: {reader.GetInt32(0)}, Order ID: {reader.GetInt32(1)}, Product ID: {reader.GetInt32(2)}, Quantity: {reader.GetInt32(3)}");
+            Console.WriteLine($"Order ID: {reader.GetInt32(0)}, Customer ID: {reader.GetInt32(1)}, Order Date: {reader.GetDateTime(2)}, Total Amount: {reader.GetInt32(3)}, Order Status: {reader.GetString(4)}");
 
             reader.Close();
             connection.Close();
         }
 
-        public void UpdateQuantity()
+        public void UpdateOrderStatus()
         {
             SqlConnection connection = DatabaseConnectivity.GetDBConnection();
             connection.Open();
@@ -82,10 +67,10 @@ namespace TechShopApplication
             Console.Write("Enter Order ID: ");
             int orderID = int.Parse(Console.ReadLine());
 
-            Console.Write("Enter new Quantity: ");
-            int quantity = int.Parse(Console.ReadLine());
+            Console.Write("Enter new Order Status: ");
+            string orderStatus = Console.ReadLine();
 
-            string sql = $"UPDATE OrderDetails SET Quantity={quantity} WHERE OrderID={orderID}";
+            string sql = $"UPDATE Orders SET OrderStatus='{orderStatus}' WHERE OrderID={orderID}";
 
             SqlCommand cmd = new SqlCommand(sql, connection);
             int result = cmd.ExecuteNonQuery();
@@ -95,7 +80,7 @@ namespace TechShopApplication
             connection.Close();
         }
 
-        public void AddDiscount()
+        public void CancelOrder()
         {
             SqlConnection connection = DatabaseConnectivity.GetDBConnection();
             connection.Open();
@@ -103,10 +88,7 @@ namespace TechShopApplication
             Console.Write("Enter Order ID: ");
             int orderID = int.Parse(Console.ReadLine());
 
-            Console.Write("Enter discount: ");
-            int discount = int.Parse(Console.ReadLine());
-
-            string sql = $"UPDATE Orders SET TotalAmount=TotalAmount - (TotalAmount/{discount}) WHERE OrderID={orderID}";
+            string sql = $"UPDATE Orders SET OrderStatus='Cancelled' WHERE OrderID={orderID}";
 
             SqlCommand cmd = new SqlCommand(sql, connection);
             int result = cmd.ExecuteNonQuery();

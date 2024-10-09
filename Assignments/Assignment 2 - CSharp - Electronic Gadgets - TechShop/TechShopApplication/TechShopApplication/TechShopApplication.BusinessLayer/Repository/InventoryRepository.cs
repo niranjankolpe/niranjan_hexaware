@@ -1,43 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace TechShopApplication
 {
-    internal class Inventory
+    internal class InventoryRepository : IInventoryRepository
     {
         private int InventoryID;
         private int ProductID;
         private int QuantityInStock;
         private DateTime LastStockUpdate;
 
-        internal int _InventoryID {  get; set; }
+        internal int _InventoryID { get; set; }
 
         internal int _ProductID { get; set; }
 
         internal int _QuantityInStock { get; set; }
 
-        internal DateTime _LastStockUpdate {  get; set; }
+        internal DateTime _LastStockUpdate { get; set; }
 
-        public Inventory()
-        {
-            this.InventoryID = 0;
-            this.ProductID = 0;
-            this.QuantityInStock = 0;
-            this.LastStockUpdate = DateTime.Now;
-        }
-
-        public Inventory(int inventoryID, int productID, int quantityInStock, DateTime lastStockUpdate)
-        {
-            this.InventoryID = inventoryID;
-            this.ProductID = productID;
-            this.QuantityInStock = quantityInStock;
-            this.LastStockUpdate = lastStockUpdate;
-        }
         public void GetProduct()
         {
             SqlConnection connection = DatabaseConnectivity.GetDBConnection();
@@ -186,7 +170,7 @@ namespace TechShopApplication
             int price = reader2.GetInt32(0);
 
 
-            Console.WriteLine($"Product ID: {productID}, Value: {quantityInStock*price}");
+            Console.WriteLine($"Product ID: {productID}, Value: {quantityInStock * price}");
 
             reader2.Close();
             connection.Close();
@@ -205,7 +189,8 @@ namespace TechShopApplication
             SqlCommand cmd = new SqlCommand(sql, connection);
             SqlDataReader reader = cmd.ExecuteReader();
 
-            while (reader.Read()) {
+            while (reader.Read())
+            {
                 Console.WriteLine($"Product ID: {reader.GetInt32(0)}, Quantity In Stock: {reader.GetInt32(1)}");
             }
 
@@ -252,5 +237,5 @@ namespace TechShopApplication
             reader.Close();
             connection.Close();
         }
-}
+    }
 }

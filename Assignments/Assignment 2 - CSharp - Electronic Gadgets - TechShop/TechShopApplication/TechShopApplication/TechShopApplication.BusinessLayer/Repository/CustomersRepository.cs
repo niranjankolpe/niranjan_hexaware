@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
-using System.Net;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-using TechShopApplication.Interfaces;
+using System.Data.SqlClient;
 
 namespace TechShopApplication
 {
-    internal class Customers
+    internal class CustomersRepository : ICustomersRepository
     {
         private int CustomerID;
         private string FirstName;
@@ -18,32 +15,7 @@ namespace TechShopApplication
         private string Email;
         private decimal Phone;
         private string Address;
-
-        internal int _CustomerID {  get; set; }
-        internal string _FirstName { get; set; }
-        internal string _LastName { get; set; }
-        internal string _Email { get; set; }
-        internal decimal _Phone { get; set; }
-        internal string _Address { get; set; }
-        public Customers()
-        {
-            this.CustomerID = 0;
-            this.FirstName = String.Empty;
-            this.LastName = String.Empty;
-            this.Email = String.Empty;
-            this.Phone = 0;
-            this.Address = String.Empty;
-        }
-        public Customers(int customerID, string firstName, string lastName, string email, decimal phone, string address)
-        {
-            this.CustomerID = customerID;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Email = email;
-            this.Phone = phone;
-            this.Address = address;
-        }
-
+        
         public void AddCustomer()
         {
             SqlConnection connection = DatabaseConnectivity.GetDBConnection();
@@ -76,7 +48,7 @@ namespace TechShopApplication
             {
                 Console.WriteLine($"Rows affected: {result}");
             }
-            
+
             connection.Close();
         }
         public void CalculateTotalOrders()
