@@ -1,0 +1,7 @@
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - CSharp - Electronic Gadgets - TechShop\TechShop\bin\Debug\TechShop.exe.config
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - CSharp - Electronic Gadgets - TechShop\TechShop\bin\Debug\TechShop.exe
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - CSharp - Electronic Gadgets - TechShop\TechShop\bin\Debug\TechShop.pdb
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - CSharp - Electronic Gadgets - TechShop\TechShop\obj\Debug\TechShop.csproj.AssemblyReference.cache
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - CSharp - Electronic Gadgets - TechShop\TechShop\obj\Debug\TechShop.csproj.CoreCompileInputs.cache
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - CSharp - Electronic Gadgets - TechShop\TechShop\obj\Debug\TechShop.exe
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Assignments\Assignment 2 - CSharp - Electronic Gadgets - TechShop\TechShop\obj\Debug\TechShop.pdb
