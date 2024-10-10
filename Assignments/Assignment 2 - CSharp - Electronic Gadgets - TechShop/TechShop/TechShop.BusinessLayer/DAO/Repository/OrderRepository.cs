@@ -28,7 +28,7 @@ namespace TechShop
             var existingOrder = GetOrder(order.OrderID);
             if (existingOrder != null)
             {
-                existingOrder.Customer = order.Customer;
+                existingOrder.CustomerID = order.CustomerID;
                 existingOrder.OrderDate = order.OrderDate;
                 existingOrder.TotalAmount = order.TotalAmount;
             }

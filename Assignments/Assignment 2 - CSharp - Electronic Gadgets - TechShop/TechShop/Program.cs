@@ -40,7 +40,7 @@ namespace TechShop
                         case "1":
                             bool exitCustomer = true;
                             string optionCustomer;
-
+                            CustomerOperations.SyncCustomers(customerService);
                             while (exitCustomer)
                             {
                                 Console.WriteLine("\nChoose: 1. Add Customer, 2. Get Customer Details, 3. Update Customer Info, 4. Exit");
@@ -71,6 +71,7 @@ namespace TechShop
                         case "2":
                             bool exitProduct = true;
                             string optionProduct;
+                            ProductOperations.SyncProducts(productService);
 
                             while (exitProduct)
                             {
@@ -104,7 +105,7 @@ namespace TechShop
                         case "3":
                             bool exitOrder = true;
                             string optionOrder;
-
+                            OrderOperations.SyncOrders(orderService, customerService);
                             while (exitOrder)
                             {
                                 Console.WriteLine("\nChoose: 1. Place Order, 2. Get Order Details, 3. Update Order, 4. Cancel Order, 5. List All Orders, 6. Exit");
@@ -112,10 +113,10 @@ namespace TechShop
                                 switch (optionOrder)
                                 {
                                     case "1":
-                                        OrderOperations.PlaceOrder(orderService);
+                                        OrderOperations.PlaceOrder(orderService, customerService);
                                         break;
                                     case "2":
-                                        OrderOperations.GetOrderDetails(orderService);
+                                        OrderOperations.GetOrderDetails(orderService, customerService);
                                         break;
                                     case "3":
                                         OrderOperations.UpdateOrder(orderService);

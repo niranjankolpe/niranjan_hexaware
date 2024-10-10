@@ -43,7 +43,7 @@ namespace TechShop
 
         public double GetInventoryValue()
         {
-            return (double)products.Sum(p => p.Price * p.QuantityInStock);
+            return (double)products.Sum(p => int.Parse(p.Price) * p.QuantityInStock);
         }
 
         public List<Product> ListLowStockProducts(int threshold)

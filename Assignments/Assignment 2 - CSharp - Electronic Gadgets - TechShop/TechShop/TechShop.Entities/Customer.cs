@@ -9,7 +9,7 @@ namespace TechShop
         private string _firstName;
         private string _lastName;
         private string _email;
-        private string _phone;
+        private decimal _phone;
         private string _address;
         private List<Order> _orders;
 
@@ -42,10 +42,10 @@ namespace TechShop
             set => _email = value ?? throw new ArgumentNullException(nameof(Email));
         }
 
-        public string Phone
+        public decimal Phone
         {
             get => _phone;
-            set => _phone = value ?? throw new ArgumentNullException(nameof(Phone));
+            set => _phone = value;
         }
 
         public string Address

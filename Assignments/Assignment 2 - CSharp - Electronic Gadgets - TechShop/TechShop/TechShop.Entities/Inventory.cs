@@ -5,7 +5,7 @@ namespace TechShop
     public class Inventory
     {
         private int _inventoryID;
-        private Product _product;
+        private int _productID;
         private int _quantityInStock;
         private DateTime _lastStockUpdate;
 
@@ -20,10 +20,10 @@ namespace TechShop
             }
         }
 
-        public Product Product
+        public int ProductID
         {
-            get => _product;
-            set => _product = value ?? throw new ArgumentNullException(nameof(Product));
+            get => _productID;
+            set => _productID = value;
         }
 
         public int QuantityInStock

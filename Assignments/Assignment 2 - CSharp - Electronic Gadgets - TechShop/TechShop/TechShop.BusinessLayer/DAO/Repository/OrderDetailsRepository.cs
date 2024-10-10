@@ -16,7 +16,7 @@ namespace TechShop
 
         public decimal CalculateTotalAmount(Order order)
         {
-            return order.OrderDetails.Sum(od => od.Product.Price * od.Quantity);
+            return order.TotalAmount;
         }
 
         public OrderDetail GetOrderDetails(int orderDetailID)

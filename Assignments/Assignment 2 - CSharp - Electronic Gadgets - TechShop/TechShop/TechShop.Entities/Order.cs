@@ -6,9 +6,9 @@ namespace TechShop
     public class Order
     {
         private int _orderID;
-        private Customer _customer;
+        private int _customerID;
         private DateTime _orderDate;
-        private decimal _totalAmount;
+        private int _totalAmount;
 
         public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 
@@ -24,10 +24,10 @@ namespace TechShop
             }
         }
 
-        public Customer Customer
+        public int CustomerID
         {
-            get => _customer;
-            set => _customer = value ?? throw new ArgumentNullException(nameof(Customer));
+            get => _customerID;
+            set => _customerID = value;
         }
 
         public DateTime OrderDate
@@ -36,7 +36,7 @@ namespace TechShop
             set => _orderDate = value;
         }
 
-        public decimal TotalAmount
+        public int TotalAmount
         {
             get => _totalAmount;
             set

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TechShop.BusinessLayer\DAO\Helpers\DatabaseConnectivity.cs" />
     <Compile Include="TechShop.BusinessLayer\DAO\Repository\CustomRepository.cs" />
     <Compile Include="TechShop.BusinessLayer\DAO\Repository\ICustomerRepository.cs" />
     <Compile Include="TechShop.BusinessLayer\DAO\Repository\IInventoryRepository.cs" />
@@ -74,6 +75,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="TechShop.BusinessLayer\DAO\Helpers\SQL Query.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

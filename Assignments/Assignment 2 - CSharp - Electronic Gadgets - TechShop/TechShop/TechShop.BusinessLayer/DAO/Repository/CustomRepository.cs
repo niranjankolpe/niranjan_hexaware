@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TechShop;
@@ -25,8 +26,10 @@ namespace TechShop
             if (existingCustomer != null)
             {
                 existingCustomer.FirstName = customer.FirstName;
+                existingCustomer.LastName = customer.LastName;
                 existingCustomer.Email = customer.Email;
-                // Update other properties as needed
+                existingCustomer.Phone = customer.Phone;
+                existingCustomer.Address = customer.Address;
             }
         }
 

@@ -7,8 +7,8 @@ namespace TechShop
         private int _productID;
         private string _productName;
         private string _description;
-        private decimal _price;
-        private bool _inStock;
+        private string _price;
+        private bool _inStock = true;
         public string Category { get; set; } // Add this property
         public Inventory Inventory { get; set; } // Add this property
 
@@ -35,15 +35,10 @@ namespace TechShop
             set => _description = value ?? throw new ArgumentNullException(nameof(Description));
         }
 
-        public decimal Price
+        public string Price
         {
             get => _price;
-            set
-            {
-                if (value < 0)
-                    throw new ArgumentException("Price cannot be negative.");
-                _price = value;
-            }
+            set => _price = value ?? throw new ArgumentNullException(nameof(Description));
         }
 
         public bool InStock

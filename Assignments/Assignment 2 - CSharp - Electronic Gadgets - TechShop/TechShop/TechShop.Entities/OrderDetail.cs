@@ -5,8 +5,8 @@ namespace TechShop
     public class OrderDetail
     {
         private int _orderDetailID;
-        private Order _order;
-        private Product _product;
+        private int _orderID;
+        private int _productID;
         private int _quantity;
 
         public int OrderDetailID
@@ -20,16 +20,16 @@ namespace TechShop
             }
         }
 
-        public Order Order
+        public int OrderID
         {
-            get => _order;
-            set => _order = value ?? throw new ArgumentNullException(nameof(Order));
+            get => _orderID;
+            set => _orderID = value;
         }
 
-        public Product Product
+        public int ProductID
         {
-            get => _product;
-            set => _product = value ?? throw new ArgumentNullException(nameof(Product));
+            get => _productID;
+            set => _productID = value;
         }
 
         public int Quantity
