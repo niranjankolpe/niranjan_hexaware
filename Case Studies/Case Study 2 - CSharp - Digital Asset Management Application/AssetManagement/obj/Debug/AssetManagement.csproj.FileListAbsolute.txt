@@ -1,0 +1,7 @@
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement\bin\Debug\AssetManagement.exe.config
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement\bin\Debug\AssetManagement.exe
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement\bin\Debug\AssetManagement.pdb
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement\obj\Debug\AssetManagement.csproj.AssemblyReference.cache
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement\obj\Debug\AssetManagement.csproj.CoreCompileInputs.cache
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement\obj\Debug\AssetManagement.exe
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement\obj\Debug\AssetManagement.pdb
