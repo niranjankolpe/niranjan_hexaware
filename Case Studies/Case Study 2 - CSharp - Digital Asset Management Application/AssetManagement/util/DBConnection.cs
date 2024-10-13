@@ -25,7 +25,7 @@ namespace AssetManagement
         }
         public static SqlConnection getConnection()
         {
-            string connectionString = getConnectionProperty("AssetManagementDBConnectionString.txt");
+            string connectionString = getConnectionProperty(@"C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement\\util\\AssetManagementDBConnectionString.txt");
             SqlConnection connection = new SqlConnection(connectionString);
             return connection;
         }

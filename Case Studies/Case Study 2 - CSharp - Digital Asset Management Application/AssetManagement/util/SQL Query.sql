@@ -1,4 +1,3 @@
--- Name: Niranjan Kolpe, Batch: C# batch-2
 -- Case Study: CSharp - Digital Asset Management Application
 
 USE master;

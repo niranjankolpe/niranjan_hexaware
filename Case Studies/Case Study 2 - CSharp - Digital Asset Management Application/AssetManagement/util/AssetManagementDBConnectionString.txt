@@ -1,1 +1,1 @@
-﻿Data Source=DESKTOP-55ISL9F;Initial Catalog=AssetManagementDB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True
+﻿

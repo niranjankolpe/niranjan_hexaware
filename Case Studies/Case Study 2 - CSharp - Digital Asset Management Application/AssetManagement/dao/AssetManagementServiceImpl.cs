@@ -15,22 +15,28 @@ namespace AssetManagement
         static List<MaintenanceRecords> maintenanceRecordsList;
         static List<Reservations> reservationsList;
         static SqlConnection connection;
+        static string sqlQuery;
 
         public AssetManagementServiceImpl()
         {
             connection = DBConnection.getConnection();
+            sqlQuery = string.Empty;
+            //connection = new SqlConnection("Data Source=DESKTOP-55ISL9F;Initial Catalog=AssetManagementDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+            assetsList = new List<Assets>();
+            employeesList = new List<Employees>();
+            assetAllocationsList = new List<AssetAllocations>();
+            maintenanceRecordsList = new List<MaintenanceRecords>();
+            reservationsList = new List<Reservations>();
         }
 
-        public void syncAssets()
+        public void SyncAssets()
         {
             try
             {
-                //SqlConnection conn = DBConnection.getConnection();
                 connection.Open();
-                string sql = $"SELECT * FROM assets";
-                SqlCommand cmd = new SqlCommand(sql, connection);
-                SqlDataReader reader = cmd.ExecuteReader();
-                assetsList = new List<Assets> ();
+                sqlQuery = $"SELECT * FROM assets";
+                SqlCommand sqlCommand = new SqlCommand(sqlQuery, connection);
+                SqlDataReader reader = sqlCommand.ExecuteReader();
                 while (reader.Read())
                 {
                     Assets asset = new Assets();
@@ -54,7 +60,7 @@ namespace AssetManagement
             }
         }
 
-        public void syncEmployees()
+        public void SyncEmployees()
         {
             try
             {
@@ -71,7 +77,6 @@ namespace AssetManagement
                     employee.Department = (string)reader["department"];
                     employee.Email = (string)reader["email"];
                     employee.Password = (string)reader["password"];
-
                     employeesList.Add(employee);
                     //Console.WriteLine($"Employee ID: {employee.EmployeeID}, Email: {employee.Name}");
                 }
@@ -83,7 +88,7 @@ namespace AssetManagement
             }
         }
 
-        public void syncAssetAllocations()
+        public void SyncAssetAllocations()
         {
             try
             {
@@ -122,7 +127,7 @@ namespace AssetManagement
             }
         }
 
-        public void syncMaintenanceRecords()
+        public void SyncMaintenanceRecords()
         {
             try
             {
@@ -153,7 +158,7 @@ namespace AssetManagement
             }
         }
 
-        public void syncReservations()
+        public void SyncReservations()
         {
             try
             {
@@ -184,12 +189,16 @@ namespace AssetManagement
                 Console.WriteLine(ex.Message);
             }
         }
+        //public bool addAsset(Assets a)
+        //{
+        //    return true;
+        //}
         public bool addAsset(Assets asset)
         {
             connection.Open();
-            string sql = $"INSERT INTO assets VALUES ('{asset.Name}', '{asset.Type}', {asset.SerialNumber}, '{asset.PurchaseDate}', '{asset.Location}', '{asset.Status}', {asset.OwnerID});  SELECT SCOPE_IDENTITY();";
-            SqlCommand cmd = new SqlCommand(sql, connection);
-            int assetID = Convert.ToInt32(cmd.ExecuteScalar());
+            sqlQuery = $"INSERT INTO assets VALUES ('{asset.Name}', '{asset.Type}', {asset.SerialNumber}, '{asset.PurchaseDate}', '{asset.Location}', '{asset.Status}', {asset.OwnerID});  SELECT SCOPE_IDENTITY();";
+            SqlCommand sqlCommand = new SqlCommand(sqlQuery, connection);
+            int assetID = Convert.ToInt32(sqlCommand.ExecuteScalar());
             asset.AssetID = assetID;
             connection.Close();
             assetsList.Add(asset);
@@ -199,177 +208,346 @@ namespace AssetManagement
 
         public bool updateAsset(Assets asset)
         {
-            connection.Open();
-            string sql = $"UPDATE assets SET name='{asset.Name}', type='{asset.Type}', serial_number={asset.SerialNumber}, purchase_date='{asset.PurchaseDate}', location='{asset.Location}', status='{asset.Status}', owner_id={asset.OwnerID} WHERE asset_id={asset.AssetID}";
-            SqlCommand cmd = new SqlCommand(sql, connection);
-            cmd.ExecuteScalar();
-            connection.Close();
-            int index = assetsList.FindIndex(x => x.AssetID == asset.AssetID);
-            assetsList[index].AssetID = asset.AssetID;
-            assetsList[index].Name = asset.Name;
-            assetsList[index].Type = asset.Type;
-            assetsList[index].SerialNumber = asset.SerialNumber;
-            assetsList[index].PurchaseDate = asset.PurchaseDate;
-            assetsList[index].Location = asset.Location;
-            assetsList[index].Status = asset.Status;
-            assetsList[index].OwnerID = asset.OwnerID;
-            Console.WriteLine($"Asset updated successfully with new Asset ID: {asset.AssetID}");
-            return true;
+            try
+            {
+                if (!assetsList.Exists(x => x.AssetID == asset.AssetID))
+                    throw new AssetNotFoundException();
+                connection.Open();
+                string sql = $"UPDATE assets SET name='{asset.Name}', type='{asset.Type}', serial_number={asset.SerialNumber}, purchase_date='{asset.PurchaseDate}', location='{asset.Location}', status='{asset.Status}', owner_id={asset.OwnerID} WHERE asset_id={asset.AssetID}";
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                cmd.ExecuteScalar();
+                connection.Close();
+                int index = assetsList.FindIndex(x => x.AssetID == asset.AssetID);
+                assetsList[index].AssetID = asset.AssetID;
+                assetsList[index].Name = asset.Name;
+                assetsList[index].Type = asset.Type;
+                assetsList[index].SerialNumber = asset.SerialNumber;
+                assetsList[index].PurchaseDate = asset.PurchaseDate;
+                assetsList[index].Location = asset.Location;
+                assetsList[index].Status = asset.Status;
+                assetsList[index].OwnerID = asset.OwnerID;
+                Console.WriteLine($"Asset updated successfully with new Asset ID: {asset.AssetID}");
+                return true;
+            }
+            catch (AssetNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return true;
+            }
         }
 
         public bool deleteAsset(int assetID)
         {
             try
             {
-                connection.Open();
-                string sql = $"DELETE FROM maintenance_records WHERE asset_id={assetID};DELETE FROM reservations WHERE asset_id={assetID};DELETE FROM asset_allocations WHERE asset_id={assetID};DELETE FROM assets WHERE asset_id={assetID};";
-                SqlCommand cmd = new SqlCommand(sql, connection);
-                cmd.ExecuteNonQuery();
-                connection.Close();
                 int index = assetsList.FindIndex(x => x.AssetID == assetID);
-                assetsList.RemoveAt(index);
-                Console.WriteLine($"Asset deleted successfully with Asset ID: {assetID}");
-                return true;
+                if (index == -1)
+                {
+                    throw new AssetNotFoundException();
+                }
+                else
+                {
+                    connection.Open();
+                    string sql = $"DELETE FROM maintenance_records WHERE asset_id={assetID};DELETE FROM reservations WHERE asset_id={assetID};DELETE FROM asset_allocations WHERE asset_id={assetID};DELETE FROM assets WHERE asset_id={assetID};";
+                    SqlCommand cmd = new SqlCommand(sql, connection);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+
+                    assetsList.RemoveAt(index);
+                    Console.WriteLine($"Asset deleted successfully with Asset ID: {assetID}");
+                    return true;
+                }
             }
-            catch (Exception ex) {
+            catch (AssetNotFoundException ex) {
                 Console.WriteLine(ex.Message);
-                return true;
+                return false;
             }
         }
 
         public bool allocateAsset(int assetID, int employeeID, string returnDate)
         {
-            int index = assetAllocationsList.FindIndex(x => x.AssetID == assetID);
-            if (index!= -1 && assetAllocationsList[index].EmployeeID == employeeID)
+            if (!assetsList.Exists(x => x.AssetID == assetID))
+                throw new AssetNotFoundException("Asset does not exist!");
+            if (!employeesList.Exists(x => x.EmployeeID == employeeID))
+                throw new EmployeeNotFoundException();
+            try
             {
-                Console.WriteLine($"Asset ID: {assetID} has already been allocated to Employee ID: {employeeID}");
-            }
-            else
-            {
-                DateTime returnDateTime;
-                if (returnDate != null)
+                int index = assetAllocationsList.FindIndex(x => x.AssetID == assetID);
+                if (index != -1 && assetAllocationsList[index].EmployeeID == employeeID)
                 {
-                    returnDateTime = DateTime.Parse(returnDate);
+                    Console.WriteLine($"Asset ID: {assetID} has already been allocated to Employee ID: {employeeID}");
+                }
+                else if (index != -1 && assetAllocationsList[index].EmployeeID != employeeID)
+                {
+                    Console.WriteLine($"Deallocate Asset ID: {assetID} from Employee ID: {assetAllocationsList[index].EmployeeID} first!");
                 }
                 else
                 {
-                    returnDateTime = DateTime.Parse("12/31/2024");
+                    int maintainIndex = maintenanceRecordsList.FindIndex(x => x.AssetID == assetID);
+                    if (maintainIndex==-1)
+                    {
+                        throw new AssetNotMaintainException("Sorry, asset is not maintained enough to allocate!");
+                    }
+                    else if (maintainIndex!=-1)
+                    {
+                        if(maintenanceRecordsList[maintainIndex].MaintenanceDate< DateTime.Today.AddYears(-2))
+                        {
+                            throw new AssetNotMaintainException("Sorry, asset is not maintained enough to allocate!");
+                        }
+                        else
+                        {
+                            int employeeIndex = employeesList.FindIndex(x => x.EmployeeID == employeeID);
+                            if (employeeIndex ==-1)
+                            {
+                                throw new EmployeeNotFoundException();
+                            }
+                            else
+                            {
+                                DateTime returnDateTime;
+                                if (returnDate != null)
+                                {
+                                    returnDateTime = DateTime.Parse(returnDate);
+                                }
+                                else
+                                {
+                                    returnDateTime = DateTime.Parse("12/31/2024");
+                                }
+                                connection.Open();
+                                string sql = $"INSERT INTO asset_allocations VALUES ({assetID}, {employeeID}, '{DateTime.Now}', '{returnDateTime}'); SELECT SCOPE_IDENTITY();";
+                                SqlCommand cmd = new SqlCommand(sql, connection);
+                                int assetAllocationID = Convert.ToInt32(cmd.ExecuteScalar());
+                                connection.Close();
+
+                                AssetAllocations allocations = new AssetAllocations();
+
+                                allocations.AllocationID = assetAllocationID;
+                                allocations.AssetID = assetID;
+                                allocations.EmployeeID = employeeID;
+                                allocations.AllocationDate = DateTime.Now;
+                                allocations.ReturnDate = returnDateTime;
+
+                                Console.WriteLine($"Asset ID: {assetID} has successfully been allocated to Employee ID: {employeeID}");
+                            }
+                        }
+                    }
                 }
-                connection.Open();
-                string sql = $"INSERT INTO asset_allocations VALUES ({assetID}, {employeeID}, '{DateTime.Now}', '{returnDateTime}'); SELECT SCOPE_IDENTITY();";
-                SqlCommand cmd = new SqlCommand(sql, connection);
-                int assetAllocationID = Convert.ToInt32(cmd.ExecuteScalar());
-                connection.Close();
-
-                AssetAllocations allocations = new AssetAllocations();
-
-                allocations.AllocationID = assetAllocationID;
-                allocations.AssetID = assetID;
-                allocations.EmployeeID = employeeID;
-                allocations.AllocationDate = DateTime.Now;
-                allocations.ReturnDate = returnDateTime;
-                
-                Console.WriteLine($"Asset ID: {assetID} has successfully been allocated to Employee ID: {employeeID}");
+            }
+            catch (AssetNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch(EmployeeNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch(AssetNotMaintainException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine (e.Message);
             }
             return true;
         }
 
         public bool deallocateAsset(int assetID, int employeeID, string returnDate)
         {
-            int index = assetAllocationsList.FindIndex(x => x.AssetID == assetID);
-            if (index != -1)
+            try
             {
-                if (assetAllocationsList[index].EmployeeID == employeeID)
+                if (!assetsList.Exists(x => x.AssetID == assetID))
+                    throw new AssetNotFoundException();
+                if (!employeesList.Exists(x => x.EmployeeID == employeeID))
+                    throw new EmployeeNotFoundException();
+
+                int index = assetAllocationsList.FindIndex(x => x.AssetID == assetID);
+                if (index != -1)
                 {
-                    DateTime returnDateTime;
-                    if (returnDate != null)
+                    if (assetAllocationsList[index].EmployeeID == employeeID)
                     {
-                        returnDateTime = DateTime.Parse(returnDate);
+                        DateTime returnDateTime;
+                        if (returnDate != null)
+                        {
+                            returnDateTime = DateTime.Parse(returnDate);
+                        }
+                        else
+                        {
+                            returnDateTime = DateTime.Parse("12/31/2024");
+                        }
+                        if (assetAllocationsList[index].ReturnDate == returnDateTime)
+                        {
+                            assetAllocationsList.RemoveAt(index);
+                        }
+                        connection.Open();
+                        string sql = $"DELETE FROM asset_allocations WHERE asset_id={assetID} AND employee_id={employeeID};";
+                        SqlCommand cmd = new SqlCommand(sql, connection);
+                        cmd.ExecuteNonQuery();
+                        connection.Close();
+
+                        Console.WriteLine($"Asset ID: {assetID} has successfully been Deallocated from Employee ID: {employeeID}");
                     }
                     else
                     {
-                        returnDateTime = DateTime.Parse("12/31/2024");
+                        Console.WriteLine($"1. Cannot deallocate since: Asset ID: {assetID} has NOT been allocated to Employee ID: {employeeID}.");
                     }
-                    if (assetAllocationsList[index].ReturnDate == returnDateTime)
-                    {
-                        assetAllocationsList.RemoveAt(index);
-                    }
-                    connection.Open();
-                    string sql = $"DELETE FROM asset_allocations WHERE asset_id={assetID} AND employee_id={employeeID};";
-                    SqlCommand cmd = new SqlCommand(sql, connection);
-                    cmd.ExecuteNonQuery();
-                    connection.Close();
-
-                    Console.WriteLine($"Asset ID: {assetID} has successfully been Deallocated from Employee ID: {employeeID}");
                 }
                 else
                 {
-                    Console.WriteLine($"1. Cannot deallocate since: Asset ID: {assetID} has NOT been allocated to Employee ID: {employeeID}.");
+                    Console.WriteLine($"2. Cannot deallocate since: Asset ID: {assetID} has NOT been allocated to Employee ID: {employeeID}.");
                 }
             }
-            else
+            catch (AssetNotFoundException ex)
             {
-                Console.WriteLine($"2. Cannot deallocate since: Asset ID: {assetID} has NOT been allocated to Employee ID: {employeeID}.");
+                Console.WriteLine(ex.Message);
+            }
+            catch (EmployeeNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
             return true;
         }
 
         public bool performMaintenance(int assetID, string maintenanceDate, string description, float cost)
         {
-            connection.Open();
-            DateTime maintenanceDateTime = DateTime.Parse(maintenanceDate);
-            string sql = $"INSERT INTO maintenance_records VALUES ({assetID}, '{maintenanceDateTime}', '{description}', {cost});  SELECT SCOPE_IDENTITY();";
-            SqlCommand cmd = new SqlCommand(sql, connection);
-            int maintenanceID = Convert.ToInt32(cmd.ExecuteScalar());
-            connection.Close();
+            try
+            {
+                if (!assetsList.Exists(x => x.AssetID == assetID))
+                    throw new AssetNotFoundException();
 
-            MaintenanceRecords maintenance = new MaintenanceRecords();
-            maintenance.MaintenanceID = maintenanceID;
-            maintenance.AssetID = assetID;
-            maintenance.MaintenanceDate = maintenanceDateTime;
-            maintenance.Description = description;
-            maintenance.Cost = cost;
-            maintenanceRecordsList.Add(maintenance);
-            Console.WriteLine($"Maintenance data added successfully with Maintenance ID: {maintenance.MaintenanceID}");
+                connection.Open();
+                DateTime maintenanceDateTime;
+                if (maintenanceDate == "")
+                {
+                    maintenanceDateTime = DateTime.Now;
+                }
+                else
+                {
+                    maintenanceDateTime = DateTime.Parse(maintenanceDate);
+                }
+                
+                string sql = $"INSERT INTO maintenance_records VALUES ({assetID}, '{maintenanceDateTime}', '{description}', {cost});  SELECT SCOPE_IDENTITY();";
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                int maintenanceID = Convert.ToInt32(cmd.ExecuteScalar());
+                connection.Close();
+
+                MaintenanceRecords maintenance = new MaintenanceRecords();
+                maintenance.MaintenanceID = maintenanceID;
+                maintenance.AssetID = assetID;
+                maintenance.MaintenanceDate = maintenanceDateTime;
+                maintenance.Description = description;
+                maintenance.Cost = cost;
+                maintenanceRecordsList.Add(maintenance);
+                Console.WriteLine($"Maintenance data added successfully with Maintenance ID: {maintenance.MaintenanceID}");
+            }
+            catch (AssetNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return true;
+            }
             return true;
         }
 
         public bool reserveAsset(int assetID, int employeeID, string reservationDate, string startDate, string endDate)
         {
-            DateTime reservationDateTime, startDateTime, endDateTime;
-            connection.Open();
-            reservationDateTime = DateTime.Parse(reservationDate);
-            startDateTime = DateTime.Parse(startDate);
-            endDateTime = DateTime.Parse(endDate);
-            string status = "Pending";
-            string sql = $"INSERT INTO reservations VALUES ({assetID}, {employeeID}, '{reservationDateTime}', '{startDateTime}', '{endDateTime}', '{status}');  SELECT SCOPE_IDENTITY();";
-            SqlCommand cmd = new SqlCommand(sql, connection);
-            int reservationID = Convert.ToInt32(cmd.ExecuteScalar());
-            connection.Close();
+            try
+            {
+                if (!assetsList.Exists(x => x.AssetID == assetID))
+                    throw new AssetNotFoundException();
+                if (!employeesList.Exists(x => x.EmployeeID == employeeID))
+                    throw new EmployeeNotFoundException();
 
-            Reservations reservation = new Reservations();
-            reservation.ReservationID = reservationID;
-            reservation.AssetID = assetID;
-            reservation.EmployeeID = employeeID;
-            reservation.ReservationDate = reservationDateTime;
-            reservation.StartDate = startDateTime;
-            reservation.EndDate = endDateTime;
-            reservation.Status = status;
-            reservationsList.Add(reservation);
-            Console.WriteLine($"Reservation added successfully with Reservation ID: {reservationID}");
-            return true;
+                if (reservationDate == "" || startDate == "" || endDate == "")
+                {
+                    Console.WriteLine("The Reservation date, Start date or End date cannot be empty. Please try again!");
+                    return true;
+                }
+
+                DateTime reservationDateTime, startDateTime, endDateTime;
+                reservationDateTime = DateTime.Parse(reservationDate);
+                startDateTime = DateTime.Parse(startDate);
+                endDateTime = DateTime.Parse(endDate);
+
+                if (reservationsList.Exists(x => x.AssetID == assetID && x.EmployeeID == employeeID && x.ReservationDate == reservationDateTime && x.StartDate == startDateTime && x.EndDate == endDateTime))
+                {
+                    Console.WriteLine("You have already applied for this asset within the same timeframe!");
+                    return true;
+                }
+                else
+                {
+                    if (reservationsList.Exists(x =>x.AssetID == assetID && x.Status == "Approved" && x.StartDate <= startDateTime && startDateTime <= x.EndDate))
+                    {
+                        Console.WriteLine("Unavailable!");
+                        return true;
+                    }
+
+                    if (reservationsList.Exists(x => x.AssetID == assetID && x.Status == "Approved" && x.StartDate <= endDateTime && endDateTime <= x.EndDate))
+                    {
+                        Console.WriteLine("Unavailable!");
+                        return true;
+                    }
+
+                    if (reservationsList.Exists(x => x.AssetID == assetID && x.Status == "Approved" && startDateTime < x.StartDate && x.EndDate < endDateTime))
+                    {
+                        Console.WriteLine("Unavailable!");
+                        return true;
+                    }
+                }
+
+                Console.WriteLine("Yahoo");
+                connection.Open();
+                string status = "Approved";
+                sqlQuery = $"INSERT INTO reservations VALUES ({assetID}, {employeeID}, '{reservationDateTime}', '{startDateTime}', '{endDateTime}', '{status}');  SELECT SCOPE_IDENTITY();";
+                SqlCommand cmd = new SqlCommand(sqlQuery, connection);
+                int reservationID = Convert.ToInt32(cmd.ExecuteScalar());
+                connection.Close();
+
+                Reservations reservation = new Reservations();
+                reservation.ReservationID = reservationID;
+                reservation.AssetID = assetID;
+                reservation.EmployeeID = employeeID;
+                reservation.ReservationDate = reservationDateTime;
+                reservation.StartDate = startDateTime;
+                reservation.EndDate = endDateTime;
+                reservation.Status = status;
+
+                reservationsList.Add(reservation);
+                Console.WriteLine($"Reservation added successfully with Reservation ID: {reservationID}");
+
+                return true;
+            }
+            catch (AssetNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return true;
+            }
+            catch (EmployeeNotFoundException ex)
+            { 
+                Console.WriteLine(ex.Message);
+                return true;
+            }
         }
 
         public bool withdrawReservation(int reservationID)
         {
-            connection.Open();
-            string sql = $"DELETE FROM reservations WHERE reservation_id={reservationID}";
-            SqlCommand cmd = new SqlCommand(sql, connection);
-            cmd.ExecuteNonQuery();
-            connection.Close();
-            int index = reservationsList.FindIndex(x => x.ReservationID == reservationID);
-            reservationsList.RemoveAt(index);
-            Console.WriteLine($"Reservation withdrawn successfully with Reservation ID: {reservationID}");
+            try
+            {
+                if (!reservationsList.Exists(x => x.ReservationID==reservationID))
+                    throw new ReservationNotFoundException();
+
+                connection.Open();
+                string sql = $"DELETE FROM reservations WHERE reservation_id={reservationID}";
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                int index = reservationsList.FindIndex(x => x.ReservationID == reservationID);
+                reservationsList.RemoveAt(index);
+                Console.WriteLine($"Reservation withdrawn successfully with Reservation ID: {reservationID}");
+
+            }
+            catch (ReservationNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             return true;
         }
     }

@@ -9,7 +9,7 @@ namespace AssetManagement
 {
     internal class AssetManagementApp
     {
-        static void Main(string[] args)
+        static void Main()
         {
             try
             {
@@ -17,11 +17,11 @@ namespace AssetManagement
 
                 string availableOptionsString = "\nChoose an option:1. Add Asset, 2. Update Asset, 3. Delete Asset, 4. Allocate Asset, 5. DeallocateAsset, 6. Perform Maintenance, 7. Reserve Asset, 8. Withdraw Reservation, 9. Exit";
                 AssetManagementServiceImpl service =  new AssetManagementServiceImpl();
-                service.syncAssets();
-                service.syncEmployees();
-                service.syncAssetAllocations();
-                service.syncMaintenanceRecords();
-                service.syncReservations();
+                service.SyncAssets();
+                service.SyncEmployees();
+                service.SyncAssetAllocations();
+                service.SyncMaintenanceRecords();
+                service.SyncReservations();
                 string option;
                 bool exit = true;
                 Assets asset;
@@ -83,6 +83,7 @@ namespace AssetManagement
                             assetID = int.Parse(Console.ReadLine());
                             service.deleteAsset(assetID);
                             break;
+
                         // Allocate Asset
                         case "4":
                             Console.Write("Enter Asset ID: ");
@@ -95,8 +96,20 @@ namespace AssetManagement
                             {
                                 returnDate = "12/31/2024";
                             }
-                            service.allocateAsset(assetID, employeeID, returnDate);
+                            try
+                            {
+                                service.allocateAsset(assetID, employeeID, returnDate);
+                            }
+                            catch (AssetNotFoundException ex)
+                            {
+                                Console.WriteLine(ex.Message);
+                            }
+                            catch(EmployeeNotFoundException ex)
+                            {
+                                Console.WriteLine(ex.Message);
+                            }
                             break;
+
                         // Deallocate Asset
                         case "5":
                             Console.Write("Enter Asset ID: ");
@@ -111,6 +124,8 @@ namespace AssetManagement
                             }
                             service.deallocateAsset(assetID, employeeID, returnDate);
                             break;
+
+                        // Perform Maintenance
                         case "6":
                             Console.Write("Enter Asset ID: ");
                             assetID = int.Parse(Console.ReadLine());
@@ -126,6 +141,8 @@ namespace AssetManagement
                             cost = float.Parse(Console.ReadLine());
                             service.performMaintenance(assetID, maintenanceDate, description, cost);
                             break;
+
+                        // Reserve Asset
                         case "7":
                             try
                             {
@@ -147,6 +164,8 @@ namespace AssetManagement
                                 Console.WriteLine(ex.ToString());
                             }
                             break;
+
+                        // Withdraw Reservation
                         case "8":
                             Console.Write("Enter Reseravation ID: ");
                             reservationID = int.Parse(Console.ReadLine());
@@ -168,7 +187,7 @@ namespace AssetManagement
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Console.WriteLine(ex.Message);
             }
         }
     }
