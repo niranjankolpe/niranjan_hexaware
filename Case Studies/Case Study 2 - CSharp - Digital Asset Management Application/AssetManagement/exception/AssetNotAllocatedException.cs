@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace AssetManagement
 {
-    public class AssetNotFoundException : Exception
+    public class AssetNotAllocatedException : Exception
     {
         public override string Message
         {
             get
             {
-                return "Asset does not exist!";
+                return "Asset has NOT been allocated to given employee!";
             }
         }
-        public AssetNotFoundException() : base()
+        public AssetNotAllocatedException() : base()
         {
-            
+
         }
-        public AssetNotFoundException(string message) : base(message)
+        public AssetNotAllocatedException(string message) : base(message)
         {
-            
+
         }
 
-        public AssetNotFoundException(string message, Exception innerException)
+        public AssetNotAllocatedException(string message, Exception innerException)
             : base(message, innerException)
         {
-            
+
         }
     }
 }

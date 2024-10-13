@@ -8,40 +8,40 @@ namespace AssetManagement
 {
     internal class MaintenanceRecords
     {
-        int maintenanceID;
-        int assetID;
-        DateTime maintenanceDate;
-        string description;
-        float cost;
+        private int _maintenanceID;
+        private int _assetID;
+        private DateTime _maintenanceDate;
+        private string _description;
+        private float _cost;
 
         public int MaintenanceID
         {
-            get => maintenanceID;
-            set => maintenanceID = value;
+            get => _maintenanceID;
+            set => _maintenanceID = value;
         }
 
         public int AssetID
         {
-            get => assetID;
-            set => assetID = value;
+            get => _assetID;
+            set => _assetID = value;
         }
 
         public DateTime MaintenanceDate
         {
-            get => maintenanceDate;
-            set => maintenanceDate = value;
+            get => _maintenanceDate;
+            set => _maintenanceDate = value;
         }
 
         public string Description
         {
-            get => description;
-            set => description = value;
+            get => _description;
+            set => _description = value;
         }
 
         public float Cost
         {
-            get => cost;
-            set => cost = value;
+            get => _cost;
+            set => _cost = value;
         }
     }
 }

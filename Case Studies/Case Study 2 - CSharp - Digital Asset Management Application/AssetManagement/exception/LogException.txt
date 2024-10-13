@@ -1,0 +1,169 @@
+﻿Error Log Details
+Source: 
+Message: Asset does not exist!
+Exception String: AssetManagement.AssetNotFoundException: Asset does not exist!
+Stack Trace: 
+Timestamp: 10/13/2024 10:57:13 AM
+
+Error Log Details
+Source: 
+Message: Asset does not exist!
+Exception String: AssetManagement.AssetNotFoundException: Asset does not exist!
+Stack Trace: 
+Timestamp: 10/13/2024 10:57:48 AM
+
+Error Log Details
+Source: 
+Message: Asset does not exist!
+Exception String: AssetManagement.AssetNotFoundException: Asset does not exist!
+Stack Trace: 
+Timestamp: 10/13/2024 12:20:16 PM
+
+Error Log Details
+Source: 
+Message: Asset does not exist!
+Exception String: AssetManagement.AssetNotFoundException: Asset does not exist!
+Stack Trace: 
+Timestamp: 10/13/2024 10:08:57 PM
+
+Error Log Details
+Source: 
+Message: Asset does not exist!
+Exception String: AssetManagement.AssetNotFoundException: Asset does not exist!
+Stack Trace: 
+Timestamp: 10/13/2024 10:39:28 PM
+
+Error Log Details
+Source: 
+Message: Asset does not exist!
+Exception String: AssetManagement.AssetNotFoundException: Asset does not exist!
+Stack Trace: 
+Timestamp: 10/13/2024 10:51:19 PM
+
+Error Log Details
+Source: 
+Message: Asset does not exist!
+Exception String: AssetManagement.AssetNotFoundException: Asset does not exist!
+Stack Trace: 
+Timestamp: 10/13/2024 10:55:36 PM
+
+Error Log Details
+Source: AssetManagement
+Message: Asset has not been maintained enough to assign to an employee!
+Exception String: AssetManagement.AssetNotMaintainException: Asset has not been maintained enough to assign to an employee!
+   at AssetManagement.AssetManagementServiceImpl.AllocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 215
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 113
+Stack Trace:    at AssetManagement.AssetManagementServiceImpl.AllocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 215
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 113
+Timestamp: 10/13/2024 11:06:53 PM
+
+Error Log Details
+Source: AssetManagement
+Message: Asset has NOT been allocated to given employee!
+Exception String: AssetManagement.AssetNotAllocatedException: Asset has NOT been allocated to given employee!
+   at AssetManagement.AssetManagementServiceImpl.DeallocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 256
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 128
+Stack Trace:    at AssetManagement.AssetManagementServiceImpl.DeallocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 256
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 128
+Timestamp: 10/13/2024 11:25:24 PM
+
+Error Log Details
+Source: AssetManagement
+Message: Asset has NOT been allocated to given employee!
+Exception String: AssetManagement.AssetNotAllocatedException: Asset has NOT been allocated to given employee!
+   at AssetManagement.AssetManagementServiceImpl.DeallocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 256
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 128
+Stack Trace:    at AssetManagement.AssetManagementServiceImpl.DeallocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 256
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 128
+Timestamp: 10/13/2024 11:26:35 PM
+
+Error Log Details
+Source: AssetManagement
+Message: Asset has not been maintained enough to assign to an employee!
+Exception String: AssetManagement.AssetNotMaintainException: Asset has not been maintained enough to assign to an employee!
+   at AssetManagement.AssetManagementServiceImpl.AllocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 215
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 113
+Stack Trace:    at AssetManagement.AssetManagementServiceImpl.AllocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 215
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 113
+Timestamp: 10/13/2024 11:27:44 PM
+
+Error Log Details
+Source: AssetManagement
+Message: Asset has not been maintained enough to assign to an employee!
+Exception String: AssetManagement.AssetNotMaintainException: Asset has not been maintained enough to assign to an employee!
+   at AssetManagement.AssetManagementServiceImpl.AllocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 215
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 113
+Stack Trace:    at AssetManagement.AssetManagementServiceImpl.AllocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 215
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 113
+Timestamp: 10/13/2024 11:27:58 PM
+
+Error Log Details
+Source: AssetManagement
+Message: Asset has NOT been allocated to given employee!
+Exception String: AssetManagement.AssetNotAllocatedException: Asset has NOT been allocated to given employee!
+   at AssetManagement.AssetManagementServiceImpl.DeallocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 256
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 128
+Stack Trace:    at AssetManagement.AssetManagementServiceImpl.DeallocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 256
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 128
+Timestamp: 10/13/2024 11:28:57 PM
+
+Error Log Details
+Source: AssetManagement
+Message: Asset has NOT been allocated to given employee!
+Exception String: AssetManagement.AssetNotAllocatedException: Asset has NOT been allocated to given employee!
+   at AssetManagement.AssetManagementServiceImpl.DeallocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 256
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 128
+Stack Trace:    at AssetManagement.AssetManagementServiceImpl.DeallocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 256
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 128
+Timestamp: 10/13/2024 11:29:36 PM
+
+Error Log Details
+Source: AssetManagement
+Message: Asset does not exist!
+Exception String: AssetManagement.AssetNotFoundException: Asset does not exist!
+   at AssetManagement.AssetManagementServiceImpl.AllocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 211
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 113
+Stack Trace:    at AssetManagement.AssetManagementServiceImpl.AllocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 211
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 113
+Timestamp: 10/13/2024 11:32:22 PM
+
+Error Log Details
+Source: AssetManagement
+Message: Asset has not been maintained enough to assign to an employee!
+Exception String: AssetManagement.AssetNotMaintainException: Asset has not been maintained enough to assign to an employee!
+   at AssetManagement.AssetManagementServiceImpl.AllocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 215
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 113
+Stack Trace:    at AssetManagement.AssetManagementServiceImpl.AllocateAsset(Int32 assetID, Int32 employeeID, String returnDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 215
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 113
+Timestamp: 10/13/2024 11:32:37 PM
+
+Error Log Details
+Source: AssetManagement
+Message: Given Reservation ID does not exist!
+Exception String: AssetManagement.ReservationNotFoundException: Given Reservation ID does not exist!
+   at AssetManagement.AssetManagementServiceImpl.WithdrawReservation(Int32 reservationID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 360
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 172
+Stack Trace:    at AssetManagement.AssetManagementServiceImpl.WithdrawReservation(Int32 reservationID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 360
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 172
+Timestamp: 10/13/2024 11:35:00 PM
+
+Error Log Details
+Source: AssetManagement
+Message: Asset does not exist!
+Exception String: AssetManagement.AssetNotFoundException: Asset does not exist!
+   at AssetManagement.AssetManagementServiceImpl.ReserveAsset(Int32 assetID, Int32 employeeID, String reservationDate, String startDate, String endDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 305
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 165
+Stack Trace:    at AssetManagement.AssetManagementServiceImpl.ReserveAsset(Int32 assetID, Int32 employeeID, String reservationDate, String startDate, String endDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 305
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 165
+Timestamp: 10/13/2024 11:35:36 PM
+
+Error Log Details
+Source: AssetManagement
+Message: Employee not found!
+Exception String: AssetManagement.EmployeeNotFoundException: Employee not found!
+   at AssetManagement.AssetManagementServiceImpl.ReserveAsset(Int32 assetID, Int32 employeeID, String reservationDate, String startDate, String endDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 307
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 165
+Stack Trace:    at AssetManagement.AssetManagementServiceImpl.ReserveAsset(Int32 assetID, Int32 employeeID, String reservationDate, String startDate, String endDate) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\dao\AssetManagementServiceImpl.cs:line 307
+   at AssetManagement.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement\main\AssetManagementApp.cs:line 165
+Timestamp: 10/13/2024 11:35:52 PM
+

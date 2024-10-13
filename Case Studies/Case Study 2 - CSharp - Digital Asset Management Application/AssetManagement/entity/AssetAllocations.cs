@@ -8,40 +8,40 @@ namespace AssetManagement
 {
     internal class AssetAllocations
     {
-        int allocationID;
-        int assetID;
-        int employeeID;
-        DateTime allocationDate;
-        DateTime returnDate;
+        private int _allocationID;
+        private int _assetID;
+        private int _employeeID;
+        private DateTime _allocationDate;
+        private DateTime _returnDate;
 
         public int AllocationID
         {
-            get => allocationID;
-            set => allocationID = value;
+            get => _allocationID;
+            set => _allocationID = value;
         }
 
         public int AssetID
         {
-            get => assetID;
-            set => assetID = value;
+            get => _assetID;
+            set => _assetID = value;
         }
 
         public int EmployeeID
         {
-            get => employeeID;
-            set => employeeID = value;
+            get => _employeeID;
+            set => _employeeID = value;
         }
 
         public DateTime AllocationDate
         {
-            get => allocationDate;
-            set => allocationDate = value;
+            get => _allocationDate;
+            set => _allocationDate = value;
         }
 
         public DateTime ReturnDate
         {
-            get => returnDate;
-            set => returnDate = value;
+            get => _returnDate;
+            set => _returnDate = value;
         }
     }
 }

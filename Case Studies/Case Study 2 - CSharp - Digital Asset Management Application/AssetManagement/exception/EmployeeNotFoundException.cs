@@ -8,18 +8,26 @@ namespace AssetManagement
 {
     internal class EmployeeNotFoundException : Exception
     {
-        public EmployeeNotFoundException() : base("Employee not found!")
+        public override string Message
+        {
+            get
+            {
+                return "Employee not found!";
+            }
+        }
+        public EmployeeNotFoundException() : base()
         {
             
         }
         public EmployeeNotFoundException(string message) : base(message)
         {
-            Console.WriteLine(message);
+            
         }
 
         public EmployeeNotFoundException(string message, Exception innerException)
             : base(message, innerException)
         {
+            
         }
     }
 }

@@ -11,7 +11,7 @@ namespace AssetManagement
 {
     internal class DBConnection
     {
-        public static string getConnectionProperty(string filename)
+        public static string GetConnectionProperty(string filename)
         {
             string text = string.Empty;
             try {
@@ -23,9 +23,9 @@ namespace AssetManagement
             }
             return text;
         }
-        public static SqlConnection getConnection()
+        public static SqlConnection GetConnection()
         {
-            string connectionString = getConnectionProperty(@"C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement\\util\\AssetManagementDBConnectionString.txt");
+            string connectionString = GetConnectionProperty(@"C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement\\util\\AssetManagementDBConnectionString.txt");
             SqlConnection connection = new SqlConnection(connectionString);
             return connection;
         }

@@ -8,61 +8,61 @@ namespace AssetManagement
 {
     public class Assets
     {
-        int assetID;
-        string name;
-        string type;
-        int serialNumber;
-        DateTime purchaseDate;
-        string location;
-        string status;
-        int ownerID;
+        private int _assetID;
+        private string _name;
+        private string _type;
+        private int _serialNumber;
+        private DateTime _purchaseDate;
+        private string _location;
+        private string _status;
+        private int _ownerID;
 
         public int AssetID
         {
-            get => assetID;
-            set => assetID = value;
+            get => _assetID;
+            set => _assetID = value;
         }
 
         public string Name
         {
-            get => name;
-            set => name = value;
+            get => _name;
+            set => _name = value;
         }
 
         public string Type
         {
-            get => type;
-            set => type = value;
+            get => _type;
+            set => _type = value;
         }
 
         public int SerialNumber
         {
-            get => serialNumber;
-            set => serialNumber = value;
+            get => _serialNumber;
+            set => _serialNumber = value;
         }
 
         public DateTime PurchaseDate
         {
-            get => purchaseDate;
-            set => purchaseDate = value;
+            get => _purchaseDate;
+            set => _purchaseDate = value;
         }
 
         public string Location
         {
-            get => location;
-            set => location = value;
+            get => _location;
+            set => _location = value;
         }
 
         public string Status
         {
-            get => status;
-            set => status = value;
+            get => _status;
+            set => _status = value;
         }
 
         public int OwnerID
         {
-            get => ownerID;
-            set => ownerID = value;
+            get => _ownerID;
+            set => _ownerID = value;
         }
     }
 }

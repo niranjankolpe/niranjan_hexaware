@@ -8,40 +8,40 @@ namespace AssetManagement
 {
     internal class Employees
     {
-        private int employeeID;
-        private string name;
-        private string department;
-        private string email;
-        private string password;
+        private int _employeeID;
+        private string _name;
+        private string _department;
+        private string _email;
+        private string _password;
 
         public int EmployeeID
         {
-            get => employeeID;
-            set => employeeID = value;
+            get => _employeeID;
+            set => _employeeID = value;
         }
 
         public string Name
         {
-            get => name;
-            set => name = value;
+            get => _name;
+            set => _name = value;
         }
 
         public string Department
         {
-            get => department;
-            set => department = value;
+            get => _department;
+            set => _department = value;
         }
 
         public string Email
         {
-            get => email;
-            set => email = value;
+            get => _email;
+            set => _email = value;
         }
 
         public string Password
         {
-            get => password;
-            set => password = value;
+            get => _password;
+            set => _password = value;
         }
     }
 }

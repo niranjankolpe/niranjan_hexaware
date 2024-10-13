@@ -1,111 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{AFECA406-3E37-4FB0-B538-6A728AC7A08B}|AssetManagement.csproj|c:\\users\\niran\\desktop\\my files\\hexaware\\codes\\github repository\\case studies\\case study 2 - csharp - digital asset management application\\assetmanagement\\tests\\assetmanagementtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFECA406-3E37-4FB0-B538-6A728AC7A08B}|AssetManagement.csproj|solutionrelative:tests\\assetmanagementtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_55ISL9F/AssetManagementDB/True/SqlTable/dbo.assets.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_55ISL9F/AssetManagementDB/True/SqlTable/dbo.asset_allocations.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFECA406-3E37-4FB0-B538-6A728AC7A08B}|AssetManagement.csproj|C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement\\main\\assetmanagementapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFECA406-3E37-4FB0-B538-6A728AC7A08B}|AssetManagement.csproj|solutionrelative:main\\assetmanagementapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFECA406-3E37-4FB0-B538-6A728AC7A08B}|AssetManagement.csproj|C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement\\dao\\assetmanagementserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFECA406-3E37-4FB0-B538-6A728AC7A08B}|AssetManagement.csproj|solutionrelative:dao\\assetmanagementserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedHeight": 197,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AssetManagementTest.cs",
-              "DocumentMoniker": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement\\Tests\\AssetManagementTest.cs",
-              "RelativeDocumentMoniker": "Tests\\AssetManagementTest.cs",
-              "ToolTip": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement\\Tests\\AssetManagementTest.cs",
-              "RelativeToolTip": "Tests\\AssetManagementTest.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAAAIcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T17:45:10.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AssetManagementServiceImpl.cs",
-              "DocumentMoniker": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement\\dao\\AssetManagementServiceImpl.cs",
-              "RelativeDocumentMoniker": "dao\\AssetManagementServiceImpl.cs",
-              "ToolTip": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement\\dao\\AssetManagementServiceImpl.cs",
-              "RelativeToolTip": "dao\\AssetManagementServiceImpl.cs",
-              "ViewState": "AgIAAAgBAAAAAAAAAAAgwBEBAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T17:45:49.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AssetManagementApp.cs",
-              "DocumentMoniker": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement\\main\\AssetManagementApp.cs",
-              "RelativeDocumentMoniker": "main\\AssetManagementApp.cs",
-              "ToolTip": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement\\main\\AssetManagementApp.cs",
-              "RelativeToolTip": "main\\AssetManagementApp.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAQwG0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T17:45:30.58Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedHeight": 179,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dbo.assets [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_55ISL9F/AssetManagementDB/True/SqlTable/dbo.assets.sql",
-              "ToolTip": "dbo.assets [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-10-13T03:34:18.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.asset_allocations [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_55ISL9F/AssetManagementDB/True/SqlTable/dbo.asset_allocations.sql",
-              "ToolTip": "dbo.asset_allocations [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-10-13T03:24:43.085Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

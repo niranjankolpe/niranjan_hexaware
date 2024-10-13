@@ -44,7 +44,7 @@ namespace AssetManagement
                 Status = status,
                 OwnerID = ownerID
             };
-            return service.addAsset(asset);
+            return service.AddAsset(asset);
         }
 
         [Test]
@@ -55,7 +55,7 @@ namespace AssetManagement
         [TestCase(2, "08/08/2024", "Annual Maintenance", 2456.45f, ExpectedResult = true)]
         public bool PerformMaintenanceTest(int assetID, string maintenanceDate, string description, float cost)
         {
-            return service.performMaintenance(assetID, maintenanceDate, description, cost);
+            return service.PerformMaintenance(assetID, maintenanceDate, description, cost);
         }
 
         [Test]
@@ -88,7 +88,7 @@ namespace AssetManagement
 
         public bool ReserveAssetTest(int assetID, int employeeID, string reservationDate, string startDate, string endDate)
         {
-            return service.reserveAsset(assetID, employeeID, reservationDate, startDate, endDate);
+            return service.ReserveAsset(assetID, employeeID, reservationDate, startDate, endDate);
         }
         
         [Test]
@@ -101,9 +101,9 @@ namespace AssetManagement
         [TestCase(29, ExpectedResult = true)]
         [TestCase(2, ExpectedResult = false)]
         [TestCase(17, ExpectedResult = true)]
-        public bool deleteAssetTest(int assetID)
+        public bool DeleteAssetTest(int assetID)
         {
-            return service.deleteAsset(assetID);
+            return service.DeleteAsset(assetID);
         }
 
         [Test]
@@ -122,7 +122,7 @@ namespace AssetManagement
 
         public void AssetNotFoundExceptionTest(int assetID, int employeeID, string returnDate)
         {
-            Assert.Throws<AssetNotFoundException>(() => service.allocateAsset(assetID, employeeID, returnDate));
+            Assert.Throws<AssetNotFoundException>(() => service.AllocateAsset(assetID, employeeID, returnDate));
         }
 
         [Test]
@@ -133,7 +133,7 @@ namespace AssetManagement
         [TestCase(28, 9772, "03/03/2024")]
         public void EmployeeNotFounExceptionTest(int assetID, int employeeID, string returnDate)
         {
-            Assert.Throws<EmployeeNotFoundException>(() => service.allocateAsset(assetID, employeeID, returnDate));
+            Assert.Throws<EmployeeNotFoundException>(() => service.AllocateAsset(assetID, employeeID, returnDate));
         }
 
     }

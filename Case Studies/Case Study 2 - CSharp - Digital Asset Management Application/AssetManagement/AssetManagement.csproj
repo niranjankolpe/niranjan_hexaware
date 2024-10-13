@@ -62,16 +62,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dao\AssetManagementService.cs" />
+    <Compile Include="dao\IAssetManagementService.cs" />
     <Compile Include="dao\AssetManagementServiceImpl.cs" />
     <Compile Include="entity\AssetAllocations.cs" />
     <Compile Include="entity\Assets.cs" />
     <Compile Include="entity\Employees.cs" />
     <Compile Include="entity\MaintenanceRecords.cs" />
     <Compile Include="entity\Reservations.cs" />
+    <Compile Include="exception\AssetNotAllocatedException.cs" />
     <Compile Include="exception\AssetNotFoundException.cs" />
     <Compile Include="exception\AssetNotMaintainException.cs" />
     <Compile Include="exception\EmployeeNotFoundException.cs" />
+    <Compile Include="exception\LogException.cs" />
     <Compile Include="exception\ReservationNotFoundException.cs" />
     <Compile Include="main\AssetManagementApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +86,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="exception\LogException.txt" />
     <Content Include="util\AssetManagementDBConnectionString.txt" />
     <Content Include="util\SQL Query.sql" />
   </ItemGroup>

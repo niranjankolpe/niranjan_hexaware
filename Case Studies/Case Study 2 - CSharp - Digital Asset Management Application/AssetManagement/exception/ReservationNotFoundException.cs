@@ -8,17 +8,26 @@ namespace AssetManagement
 {
     internal class ReservationNotFoundException : Exception
     {
-        public ReservationNotFoundException() : base("Reservation with given Reservation ID does not exist!")
+        public override string Message
         {
-
+            get
+            {
+                return "Given Reservation ID does not exist!";
+            }
+        }
+        public ReservationNotFoundException() : base()
+        {
+            
         }
         public ReservationNotFoundException(string message) : base(message)
         {
+            
         }
 
         public ReservationNotFoundException(string message, Exception innerException)
             : base(message, innerException)
         {
+            
         }
     }
 }
