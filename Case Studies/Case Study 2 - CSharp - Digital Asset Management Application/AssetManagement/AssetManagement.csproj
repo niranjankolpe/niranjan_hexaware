@@ -53,6 +53,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,33 +63,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dao\IAssetManagementService.cs" />
-    <Compile Include="dao\AssetManagementServiceImpl.cs" />
-    <Compile Include="entity\AssetAllocations.cs" />
-    <Compile Include="entity\Assets.cs" />
-    <Compile Include="entity\Employees.cs" />
-    <Compile Include="entity\MaintenanceRecords.cs" />
-    <Compile Include="entity\Reservations.cs" />
-    <Compile Include="exception\AssetNotAllocatedException.cs" />
-    <Compile Include="exception\AssetNotFoundException.cs" />
-    <Compile Include="exception\AssetNotMaintainException.cs" />
-    <Compile Include="exception\EmployeeNotFoundException.cs" />
-    <Compile Include="exception\LogException.cs" />
-    <Compile Include="exception\ReservationNotFoundException.cs" />
-    <Compile Include="main\AssetManagementApp.cs" />
+    <Compile Include="AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs" />
+    <Compile Include="AssetManagement.BusinessLayer\Repository\IAssetManagementRepository.cs" />
+    <Compile Include="AssetManagement.BusinessLayer\Service\AssetManagementService.cs" />
+    <Compile Include="AssetManagement.BusinessLayer\Service\IAssetManagementService.cs" />
+    <Compile Include="AssetManagement.Entity\AssetAllocations.cs" />
+    <Compile Include="AssetManagement.Entity\Assets.cs" />
+    <Compile Include="AssetManagement.Entity\Employees.cs" />
+    <Compile Include="AssetManagement.Entity\MaintenanceRecords.cs" />
+    <Compile Include="AssetManagement.Entity\Reservations.cs" />
+    <Compile Include="AssetManagement.Exception\AssetNotAllocatedException.cs" />
+    <Compile Include="AssetManagement.Exception\AssetNotFoundException.cs" />
+    <Compile Include="AssetManagement.Exception\AssetNotMaintainException.cs" />
+    <Compile Include="AssetManagement.Exception\EmployeeNotFoundException.cs" />
+    <Compile Include="AssetManagement.Exception\LogException.cs" />
+    <Compile Include="AssetManagement.Exception\ReservationNotFoundException.cs" />
+    <Compile Include="AssetManagement.UI\AssetManagementApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\AssetManagementTest.cs" />
-    <Compile Include="util\DBConnection.cs" />
+    <Compile Include="AssetManagement.Tests\AssetManagementTest.cs" />
+    <Compile Include="AssetManagement.Util\DBConnection.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="AssetManagement.UI\App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="exception\LogException.txt" />
-    <Content Include="util\AssetManagementDBConnectionString.txt" />
-    <Content Include="util\SQL Query.sql" />
+    <Content Include="AssetManagement.Exception\LogException.txt" />
+    <Content Include="AssetManagement.Util\SQL Query.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
