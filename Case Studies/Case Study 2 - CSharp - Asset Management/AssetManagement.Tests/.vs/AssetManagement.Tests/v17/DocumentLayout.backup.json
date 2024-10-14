@@ -1,0 +1,47 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement.Tests\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9BE133A1-8D1F-4C10-9D5B-00B8AB7C5986}|AssetManagement.Tests.csproj|c:\\users\\niran\\desktop\\my files\\hexaware\\codes\\github repository\\case studies\\case study 2 - csharp - digital asset management application\\assetmanagement.tests\\assetmanagementtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BE133A1-8D1F-4C10-9D5B-00B8AB7C5986}|AssetManagement.Tests.csproj|solutionrelative:assetmanagementtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 171,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AssetManagementTest.cs",
+              "DocumentMoniker": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement.Tests\\AssetManagementTest.cs",
+              "RelativeDocumentMoniker": "AssetManagementTest.cs",
+              "ToolTip": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Case Studies\\Case Study 2 - CSharp - Digital Asset Management Application\\AssetManagement.Tests\\AssetManagementTest.cs",
+              "RelativeToolTip": "AssetManagementTest.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAqwHQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T15:41:33.967Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 153,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

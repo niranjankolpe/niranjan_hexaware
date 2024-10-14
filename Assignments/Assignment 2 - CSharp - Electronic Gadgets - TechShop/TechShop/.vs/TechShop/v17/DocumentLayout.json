@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Assignments\\Assignment 2\\TechShop\\",
+  "WorkspaceRootPath": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Assignments\\Assignment 2 - CSharp - Electronic Gadgets - TechShop\\TechShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{588E20B5-787B-4784-A554-71B4106DE7F0}|TechShop.csproj|c:\\users\\niran\\desktop\\my files\\hexaware\\codes\\github repository\\assignments\\assignment 2\\techshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{588E20B5-787B-4784-A554-71B4106DE7F0}|TechShop.csproj|C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Assignments\\Assignment 2 - CSharp - Electronic Gadgets - TechShop\\TechShop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{588E20B5-787B-4784-A554-71B4106DE7F0}|TechShop.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,13 +20,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Assignments\\Assignment 2\\TechShop\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Assignments\\Assignment 2 - CSharp - Electronic Gadgets - TechShop\\TechShop\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Assignments\\Assignment 2\\TechShop\\Program.cs",
+              "ToolTip": "C:\\Users\\niran\\Desktop\\My Files\\Hexaware\\Codes\\GitHub Repository\\Assignments\\Assignment 2 - CSharp - Electronic Gadgets - TechShop\\TechShop\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAOMAAAAAAAAAAAAAAGUAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T13:54:26.472Z",
+              "WhenOpened": "2024-10-14T11:03:55.105Z",
               "EditorCaption": ""
             }
           ]

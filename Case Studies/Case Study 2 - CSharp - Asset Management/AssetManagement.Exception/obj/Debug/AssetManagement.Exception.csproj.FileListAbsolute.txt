@@ -1,0 +1,6 @@
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.Exception\bin\Debug\AssetManagement.Exception.dll
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.Exception\bin\Debug\AssetManagement.Exception.pdb
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.Exception\obj\Debug\AssetManagement.Exception.csproj.AssemblyReference.cache
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.Exception\obj\Debug\AssetManagement.Exception.csproj.CoreCompileInputs.cache
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.Exception\obj\Debug\AssetManagement.Exception.dll
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.Exception\obj\Debug\AssetManagement.Exception.pdb

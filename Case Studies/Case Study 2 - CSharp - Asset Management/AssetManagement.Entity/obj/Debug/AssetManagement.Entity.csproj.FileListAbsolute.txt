@@ -1,0 +1,6 @@
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.Entity\bin\Debug\AssetManagement.Entity.dll
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.Entity\bin\Debug\AssetManagement.Entity.pdb
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.Entity\obj\Debug\AssetManagement.Entity.csproj.AssemblyReference.cache
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.Entity\obj\Debug\AssetManagement.Entity.csproj.CoreCompileInputs.cache
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.Entity\obj\Debug\AssetManagement.Entity.dll
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.Entity\obj\Debug\AssetManagement.Entity.pdb
