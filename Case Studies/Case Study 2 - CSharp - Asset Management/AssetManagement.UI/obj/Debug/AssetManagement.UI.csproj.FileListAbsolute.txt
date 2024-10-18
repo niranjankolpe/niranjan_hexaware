@@ -14,3 +14,20 @@ C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Ca
 C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.UI\obj\Debug\AssetMan.5D1FB29D.Up2Date
 C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.UI\obj\Debug\AssetManagement.UI.exe
 C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.UI\obj\Debug\AssetManagement.UI.pdb
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\bin\Debug\AssetManagement.UI.exe.config
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\bin\Debug\AssetManagement.UI.exe
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\bin\Debug\AssetManagement.UI.pdb
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\bin\Debug\AssetManagement.BusinessLayer.dll
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\bin\Debug\AssetManagement.Entity.dll
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\bin\Debug\AssetManagement.Exception.dll
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\bin\Debug\AssetManagement.Util.dll
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\bin\Debug\AssetManagement.BusinessLayer.pdb
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\bin\Debug\AssetManagement.Entity.pdb
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\bin\Debug\AssetManagement.Exception.pdb
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\bin\Debug\AssetManagement.Util.pdb
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\bin\Debug\AssetManagement.Util.dll.config
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\obj\Debug\AssetManagement.UI.csproj.AssemblyReference.cache
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\obj\Debug\AssetManagement.UI.csproj.CoreCompileInputs.cache
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\obj\Debug\AssetMan.5D1FB29D.Up2Date
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\obj\Debug\AssetManagement.UI.exe
+C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\obj\Debug\AssetManagement.UI.pdb

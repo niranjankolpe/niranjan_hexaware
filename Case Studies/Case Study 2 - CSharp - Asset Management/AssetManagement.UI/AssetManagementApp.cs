@@ -226,6 +226,11 @@ namespace AssetManagement.UI
                         Console.WriteLine(ex.Message);
                         LogException.LogCurrentException(ex.Source, ex.Message, ex.ToString(), ex.StackTrace, DateTime.Now);
                     }
+                    catch (System.Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        LogException.LogCurrentException(ex.Source, ex.Message, ex.ToString(), ex.StackTrace, DateTime.Now);
+                    }
                 }
                 Console.WriteLine("\nThanks for using Digital Asset Management Application :)");
                 // Program End

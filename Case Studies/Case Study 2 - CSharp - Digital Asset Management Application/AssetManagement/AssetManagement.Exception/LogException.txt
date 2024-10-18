@@ -1,0 +1,142 @@
+Error Log Details
+Source: mscorlib
+Message: Input string was not in a correct format.
+Exception String: System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 105
+Stack Trace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 105
+Timestamp: 10/17/2024 9:00:57 AM
+
+Error Log Details
+Source: AssetManagement.BusinessLayer
+Message: Asset does not exist!
+Exception String: AssetManagement.Exception.AssetNotFoundException: Asset does not exist!
+   at AssetManagement.BusinessLayer.AssetManagementRepository.DeleteAsset(Int32 assetID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs:line 208
+   at AssetManagement.BusinessLayer.AssetManagementService.DeleteAsset(Int32 assetID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Service\AssetManagementService.cs:line 31
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 106
+Stack Trace:    at AssetManagement.BusinessLayer.AssetManagementRepository.DeleteAsset(Int32 assetID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs:line 208
+   at AssetManagement.BusinessLayer.AssetManagementService.DeleteAsset(Int32 assetID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Service\AssetManagementService.cs:line 31
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 106
+Timestamp: 10/17/2024 9:01:39 AM
+
+Error Log Details
+Source: AssetManagement.BusinessLayer
+Message: Asset does not exist!
+Exception String: AssetManagement.Exception.AssetNotFoundException: Asset does not exist!
+   at AssetManagement.BusinessLayer.AssetManagementRepository.DeleteAsset(Int32 assetID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs:line 208
+   at AssetManagement.BusinessLayer.AssetManagementService.DeleteAsset(Int32 assetID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Service\AssetManagementService.cs:line 31
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 106
+Stack Trace:    at AssetManagement.BusinessLayer.AssetManagementRepository.DeleteAsset(Int32 assetID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs:line 208
+   at AssetManagement.BusinessLayer.AssetManagementService.DeleteAsset(Int32 assetID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Service\AssetManagementService.cs:line 31
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 106
+Timestamp: 10/17/2024 9:03:20 AM
+
+Error Log Details
+Source: mscorlib
+Message: Input string was not in a correct format.
+Exception String: System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 105
+Stack Trace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 105
+Timestamp: 10/17/2024 9:03:25 AM
+
+Error Log Details
+Source: .Net SqlClient Data Provider
+Message: The INSERT statement conflicted with the FOREIGN KEY constraint "FK__assets__owner_id__398D8EEE". The conflict occurred in database "AssetManagementDB", table "dbo.employees", column 'employee_id'.
+The statement has been terminated.
+Exception String: System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__assets__owner_id__398D8EEE". The conflict occurred in database "AssetManagementDB", table "dbo.employees", column 'employee_id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at AssetManagement.BusinessLayer.AssetManagementRepository.AddAsset(Assets asset) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs:line 175
+   at AssetManagement.BusinessLayer.AssetManagementService.AddAsset(Assets asset) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Service\AssetManagementService.cs:line 21
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 76
+ClientConnectionId:7aff8870-f2ef-46fc-baf8-a7118d12892c
+Error Number:547,State:0,Class:16
+Stack Trace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at AssetManagement.BusinessLayer.AssetManagementRepository.AddAsset(Assets asset) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs:line 175
+   at AssetManagement.BusinessLayer.AssetManagementService.AddAsset(Assets asset) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Service\AssetManagementService.cs:line 21
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 76
+Timestamp: 10/17/2024 9:46:09 AM
+
+Error Log Details
+Source: System.Data
+Message: The connection was not closed. The connection's current state is open.
+Exception String: System.InvalidOperationException: The connection was not closed. The connection's current state is open.
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at AssetManagement.BusinessLayer.AssetManagementRepository.AddAsset(Assets asset) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs:line 172
+   at AssetManagement.BusinessLayer.AssetManagementService.AddAsset(Assets asset) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Service\AssetManagementService.cs:line 21
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 76
+Stack Trace:    at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at AssetManagement.BusinessLayer.AssetManagementRepository.AddAsset(Assets asset) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs:line 172
+   at AssetManagement.BusinessLayer.AssetManagementService.AddAsset(Assets asset) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Service\AssetManagementService.cs:line 21
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 76
+Timestamp: 10/17/2024 9:47:01 AM
+
+Error Log Details
+Source: System.Data
+Message: The connection was not closed. The connection's current state is open.
+Exception String: System.InvalidOperationException: The connection was not closed. The connection's current state is open.
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at AssetManagement.BusinessLayer.AssetManagementRepository.UpdateAsset(Assets asset) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs:line 187
+   at AssetManagement.BusinessLayer.AssetManagementService.UpdateAsset(Assets asset) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Service\AssetManagementService.cs:line 26
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 98
+Stack Trace:    at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at AssetManagement.BusinessLayer.AssetManagementRepository.UpdateAsset(Assets asset) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs:line 187
+   at AssetManagement.BusinessLayer.AssetManagementService.UpdateAsset(Assets asset) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Service\AssetManagementService.cs:line 26
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 98
+Timestamp: 10/17/2024 9:48:24 AM
+
+Error Log Details
+Source: AssetManagement.BusinessLayer
+Message: Asset does not exist!
+Exception String: AssetManagement.Exception.AssetNotFoundException: Asset does not exist!
+   at AssetManagement.BusinessLayer.AssetManagementRepository.DeleteAsset(Int32 assetID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs:line 208
+   at AssetManagement.BusinessLayer.AssetManagementService.DeleteAsset(Int32 assetID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Service\AssetManagementService.cs:line 31
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 106
+Stack Trace:    at AssetManagement.BusinessLayer.AssetManagementRepository.DeleteAsset(Int32 assetID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Repository\AssetManagementRepository.cs:line 208
+   at AssetManagement.BusinessLayer.AssetManagementService.DeleteAsset(Int32 assetID) in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Digital Asset Management Application\AssetManagement.BusinessLayer\Service\AssetManagementService.cs:line 31
+   at AssetManagement.UI.AssetManagementApp.Main() in C:\Users\niran\Desktop\My Files\Hexaware\Codes\GitHub Repository\Case Studies\Case Study 2 - CSharp - Asset Management\AssetManagement.UI\AssetManagementApp.cs:line 106
+Timestamp: 10/17/2024 9:50:26 AM
+
